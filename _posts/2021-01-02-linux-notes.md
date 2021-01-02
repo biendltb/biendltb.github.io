@@ -8,6 +8,7 @@ classes:
 tags:
   - linux
   - bash
+published: false
 ---
 
 ## Useful Linux commands
