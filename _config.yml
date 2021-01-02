@@ -20,6 +20,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 twitter_username: biendltb
 github_username: biendltb
 minimal_mistakes_skin: dark
+github: [metadata] # for local development
 search: true
 
 # Build settings
@@ -58,32 +59,32 @@ plugins:
 author:
   name   : "biendltb"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  bio    : "This is biendltb's space where I nail the time, memories and knowledge."
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://"
+      url: "https://biendltb.github.io/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+      url: "https://twitter.com/biendltb"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://github.com/biendltb"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/biendltb/"
 
 footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+      url: "https://twitter.com/biendltb"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://github.com/biendltb"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/biendltb/"
 
 defaults:
   # _posts
@@ -111,3 +112,10 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+repository: "biendltb/biendltb.github.io"
+comments:
+  provider: "utterances"
+  utterances:
+    theme: "github-dark" # "github-light"
+    issue_term: "pathname"
