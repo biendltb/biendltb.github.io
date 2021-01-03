@@ -99,7 +99,7 @@ defaults:
       read_time: true
       comments: true
       #share: true # enable this for social share
-      related: true
+      #related: true # enable this to show related posts
   # _pages
   - scope:
       path: "_pages"

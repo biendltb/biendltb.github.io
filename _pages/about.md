@@ -4,7 +4,14 @@ title: "About"
 author_profile: true
 ---
 
-![Bien in his MSc grad ceremony]({{ site.url }}{{ site.baseurl }}/assets/images/msc_grad_retro.jpg)
+{% capture fig_img %}
+![Bien in his MSc grad ceremony]({{ '/assets/images/msc_grad_retro.jpg' | relative_url }})
+{% endcapture %}
+
+<figure>
+  {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
+  <figcaption>Bien in his MSc grad ceremony.</figcaption>
+</figure>
 
 
 Bien is a programmer who is interested in utilising technology to advance human life. He is passionate about AI and Data Science as well as their applications in everyday life.
