@@ -1,8 +1,14 @@
 ---
 permalink: /about/
 title: "About"
+author_profile: true
 ---
 
-Tempor velit sint sunt ipsum tempor enim ad qui ullamco. Est dolore anim ad velit duis dolore minim sunt aliquip amet commodo labore. Ut eu pariatur aute ea aute excepteur laborum. Esse ea esse excepteur minim mollit qui cillum excepteur ex dolore magna. Labore deserunt fugiat incididunt incididunt sint ea. Consequat dolore aute laboris quis proident quis non et est consectetur ex eiusmod sit culpa.
+![Bien in his MSc grad ceremony]({{ site.url }}{{ site.baseurl }}/assets/images/msc_grad_retro.jpg)
 
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
+
+Bien is a programmer who is interested in utilising technology to advance human life. He is passionate about AI and Data Science as well as their applications in everyday life.
+
+He completed his master's degree in Computer Vision and Deep Learning in the UK in 2017 under the Chevening scholarship. Before coming to the UK to pursue his Master's degree, he used to work in countries such as Vietnam, Singapore, and Indonesia in various kinds of projects. He also represented his team at workshops and conferences.
+
+Programming is his favourite field. Also, he loves photography, violin, and cycling. 
