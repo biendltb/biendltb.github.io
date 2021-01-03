@@ -134,4 +134,6 @@ If you still insists on changing it, you could follow the steps as below:
     }
     ```
 
+    Note: If there is no effect after the change, try to clear your browser cache or test it in a different browser.
+
     Reference: [link](https://github.com/mmistakes/minimal-mistakes/issues/1219#issuecomment-326809412)
