@@ -94,7 +94,8 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
+      # enable this for displaying the author profile on the left size
+      # author_profile: true
       read_time: true
       comments: true
       #share: true # enable this for social share

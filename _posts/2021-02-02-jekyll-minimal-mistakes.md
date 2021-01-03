@@ -29,36 +29,36 @@ Create your own personal blog with Jekyll and Minimal Mistakes theme in some sim
 
     Note: Try to not go for a too new version if you do not needed (e.g. 3.0.0 gives me errors while 2.7.2 does not).
 
-```bash
-cd
-git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-echo 'eval "$(rbenv init -)"' >> ~/.bashrc
-exec $SHELL
+    ```bash
+    cd
+    git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+    echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+    echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+    exec $SHELL
 
-git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
-echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
-exec $SHELL
+    git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+    echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+    exec $SHELL
 
-rbenv install 2.7.2
-rbenv global 2.7.2
-ruby -v
-```
+    rbenv install 2.7.2
+    rbenv global 2.7.2
+    ruby -v
+    ```
 
 4. Install Jekyll and Bundler
 
-```bash
-gem install jekyll bundler
-```
+    ```bash
+    gem install jekyll bundler
+    ```
 
 5. Launch your site
 
-```bash
+    ```bash
 
-cd /path/to/your/repo
+    cd /path/to/your/repo
 
-bundler exec jekyll serve
-```
+    bundler exec jekyll serve
+    ```
 
 Now you could modify your site according to [guides](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) from Minimal Mistakes.
 
@@ -70,25 +70,68 @@ Minimal Mistakes gives you many layouts. They are hide in its gem library for re
 If you cannot change it there, following below steps:
 
 1. Create a `_layouts` folder in the root of your repo
-```bash
-mkdir _layouts
-```
+    ```bash
+    mkdir _layouts
+    ```
 
 2. To get the default layouts of the theme, you first need to let the bundle download and install it in your machine. Adding bellow lines to the `Gemfile` in your repo and remove it later. Push it to your remote could create error for the Github Pages since it supports a very limit number of plugins.
-```txt
-gem "minimal-mistakes-jekyll"
-```
+    ```txt
+    gem "minimal-mistakes-jekyll"
+    ```
 
 3. Let bundle install the theme in your local by running
-```bash
-bundle
-```
+    ```bash
+    bundle
+    ```
 
 4. Get the path to the theme layouts
-```bash
-bundle info minimal-mistakes-jekyll
-```
+    ```bash
+    bundle info minimal-mistakes-jekyll
+    ```
 
 5. You could find the `_layouts` folder in the path (e.g. `/home/biendltb/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/minimal-mistakes-jekyll-4.21.0/_layouts/`).
 
     Copy the layout file that you want to modify to the `_layouts` folder in your repo. Modify it and push to the remote.
+
+
+## Reduce the font size (not recommended)
+
+The default font size of the post might look slightly big in your PC but it's there for it purpose. It is set for 80 characters per line so that would be suitable when reading on phone.
+
+If you still insists on changing it, you could follow the steps as below:
+
+1. Create a css file to override the `main.scss` file
+    ```bash
+      mkdir -p /assets/css
+
+      vi /assets/css/main.scss
+    ```
+
+2. Paste the content as below:
+    ```scss
+    --- 
+    # Only the main Sass file needs front matter (the dashes are enough) 
+    --- 
+
+    @charset "utf-8";
+
+    @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; //skin
+    @import "minimal-mistakes"; // main partials
+
+    html {
+        font-size: 12px; // originally 16px
+        @include breakpoint($medium) {
+            font-size: 14px; // originally 18px
+        }
+
+        @include breakpoint($large) {
+            font-size: 16px; // originally 20px
+        }
+
+        @include breakpoint($x-large) {
+            font-size: 18px; // originally 22px
+        }
+    }
+    ```
+
+    Reference: [link](https://github.com/mmistakes/minimal-mistakes/issues/1219#issuecomment-326809412)
