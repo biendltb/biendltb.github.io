@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "A summary of API Design for C++ - Morgan Kaufmann (part 1)"
+title: "A summary of API Design for C++ - Martin Reddy (part 1)"
 date: 2021-02-09T21:24:00+07:00
 categories: book
 classes:
