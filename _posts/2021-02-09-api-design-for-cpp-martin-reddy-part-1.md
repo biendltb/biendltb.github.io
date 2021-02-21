@@ -11,6 +11,8 @@ tags:
   - c++
 ---
 
+A short introduction to API design and principles for having high-quality API designs
+
 {% include toc icon="cog" title="Table of Contents" %}
 
 # Introduction
