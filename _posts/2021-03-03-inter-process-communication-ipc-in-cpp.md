@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Communication between processes in C/C++"
-date: 2021-02-24T20:47:00+07:00
+date: 2021-03-03T06:43:00+07:00
 categories: tech
 classes:
   - dark-theme
@@ -10,6 +10,9 @@ tags:
   - ipc
   - process
   - c++
+  - named pipe
+  - shared memory
+  - UNIX domain socket
 ---
 
 Common techniques for communication between processes in C/C++
