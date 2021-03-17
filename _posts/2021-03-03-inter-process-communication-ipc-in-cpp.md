@@ -43,7 +43,7 @@ Let's go deeper into the details of each of those methods with simple examples. 
 
 Shared memory is the fastest one among available IPC techniques. Once the memory is mapped into the address space of the processes that are sharing the memory region, no kernel involvement occurs in passing data between the processes. However, some forms of synchronization between processes (e.g. mutexes, condition variables, read-write locks, record locks, semaphores) are required when storing and fetching data to and from the shared memory region. For the sake of simplicity, the following example will not use any synchronization technique.
 
-In the following example, `fork()` will be used to "duplicate" the parent process into one more child process. We will use pid to differentiate them since child process pid will start with 0. `shm_open` is used to create a shared memory object in the form of a file descriptor (stored in the OS kernel) which will then be mapped to the address space of processes using `mmap`. This returns the address of the pointer which points to the actual shared memory region.
+In the following example, `fork()` will be used to "duplicate" the parent process into one more child process. We will use PID to differentiate them since child process pid will start with 0. `shm_open` is used to create a shared memory object in the form of a file descriptor (stored in the OS kernel) which will then be mapped to the address space of processes using `mmap`. This returns the address of the pointer which points to the actual shared memory region. 
 
 The following program will iteratively increases a counter which passes between the parent and child process.
 
@@ -187,6 +187,10 @@ Process 0: No new msg received
 ```
 
 In the example, we could see that the structural message is passed between the parent and the child. A process increase the value and pass it to the other and wait until the other process increase it. All data passing occurs in a shared memory space.
+
+It is worth to note that the shared memory size initially is zero. `ftruncate` is used to truncate the file descriptor to a specific length. If it's larger than the actual data size, the extra data will be initialized as 0.
+
+It is very often for us when we want to pass a pointer to a shared memory region. However, as stated in the beginning, processes have separate memory regions so passing a pointer between them is not possible. A memory address in this process is not valid in others. If we want to pass an array of bytes to the shared memory region, we have to use `mmap` to map the region with the desired size, then use `memcpy` to write the size to the pointer address returned from `mmap`. When you have different member types with a data array in the struct that you want to share, you have to combine/encode them to a single array (i.e. a single memory region) as what you do when passing a struct via socket, so that you coud copy them to the shared memory region and decode in the same order when reading it from another process.
 
 ## Named pipe
 
