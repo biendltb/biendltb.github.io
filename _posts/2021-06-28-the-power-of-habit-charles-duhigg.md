@@ -10,9 +10,12 @@ tags:
   - brain science
 ---
 
+A collection of stories about how habit works and impacts out everyday life.
+
 My comments on the book:
 * The book shows examples of where a habit is coded in the human brain and how it is formed and deformed.
 * The best takeaway from the book is the habit loop of "cue --> routine --> reward". Identifying and acknowledging it is the first step to reshaping or forming a habit.
+{: .notice}
 
 
 ## Part 1: The habit of individuals
