@@ -12,10 +12,13 @@ tags:
 
 A collection of stories about how habit works and impacts out everyday life.
 
+<div class="notice">{{ notice-2 | markdownify }}</div>
+
+{% capture notice-2 %}
 My comments on the book:
 * The book shows examples of where a habit is coded in the human brain and how it is formed and deformed.
 * The best takeaway from the book is the habit loop of "cue --> routine --> reward". Identifying and acknowledging it is the first step to reshaping or forming a habit.
-{: .notice}
+{% endcapture %}
 
 
 ## Part 1: The habit of individuals
@@ -24,7 +27,8 @@ My comments on the book:
 
 * Eugene Pauly case is special. He formed new habits unconsciously but he could not retrieve information of his new habit from the concious part of the brain.
 * Basal ganglia is the part in the centre of the brain that stores habits.
-    --> Habits are like compiled binary files stored in a safe place. You call them in the right context.
+  Habits are like compiled binary files stored in a safe place. You call them in the right context.
+  {: .notice}
 * If we change some cues in the 
 * We perform a countless number of habits in our daily life. It saves us a lot of energy for making decisions (from small actions like dressing, brushing to driving, cooking).
 * In the first time we learn something new, the brain works hard to figure out the right way. Then after time and time when you find the right course of action with rewards, the brain activities will reduce every time you take the action and a new habit is formed.
@@ -60,7 +64,8 @@ My comments on the book:
 
 * The case of Target to predict someone getting pregnant but try not to let them know that the company knows it.
 * The case of making the 'Hey Ya' song be familiar with radio listeners and make them enjoy it.
-  --> When we listen to a new song with unfamiliar rythms to our favourite style while we are working on other tasks (e.g. in the case of listening to radio), we're likely to feel uncomfortable and switch to some songs that we are familiar with. But if we are relaxed and focus on watching a new MV on Youtube, it's easier for us to enjoy it.
+  When we listen to a new song with unfamiliar rythms to our favourite style while we are working on other tasks (e.g. in the case of listening to radio), we're likely to feel uncomfortable and switch to some songs that we are familiar with. But if we are relaxed and focus on watching a new MV on Youtube, it's easier for us to enjoy it.
+  {: .notice}
 * The case of changing the way of cooking to make Americans familiar with organs in their diets.
 
 ## Part 3: The habits of societies
