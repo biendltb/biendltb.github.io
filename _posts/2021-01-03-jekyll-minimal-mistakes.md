@@ -27,7 +27,7 @@ Create your own personal blog with Jekyll and Minimal Mistakes theme in some sim
 
 3. Install Ruby gems with `rbenv` ([ref](https://gorails.com/setup/ubuntu/18.04))
 
-    Note: Try to not go for a too new version if you do not needed (e.g. 3.0.0 gives me errors while 2.7.2 does not).
+    Note: Try to not go for a too new version if you do not needed (Jekyll is not compatible with Ruby 3 so 2.7.2 is appropriate). (Error: no implicit conversion of Hash into Integer (TypeError))
 
     ```bash
     cd
@@ -57,6 +57,10 @@ Create your own personal blog with Jekyll and Minimal Mistakes theme in some sim
 
     cd /path/to/your/repo
 
+    # install all required package
+    bundle install
+
+    # launch
     bundler exec jekyll serve
     ```
 
