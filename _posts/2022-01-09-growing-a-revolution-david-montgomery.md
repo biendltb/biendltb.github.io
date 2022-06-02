@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Growing a revolution - Bring our soil back to life (personal notes) - David R. Montgomery"
-date: 2021-01-09T07:50:00+07:00
+date: 2022-01-09T07:50:00+07:00
 categories: book
 classes:
   - dark-theme
