@@ -120,4 +120,4 @@ comments:
   provider: "utterances"
   utterances:
     theme: "github-dark" # "github-light"
-    issue_term: "pathname"
+    issue_term: title
