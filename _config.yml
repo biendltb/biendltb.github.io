@@ -119,5 +119,5 @@ repository: "biendltb/biendltb.github.io"
 comments:
   provider: "utterances"
   utterances:
-    theme: "github-dark" # "github-light"
-    issue_term: title
+    theme: "github-light"
+    issue_term: "pathname"
